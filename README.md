@@ -9,7 +9,7 @@ This plugin requires neovim with `pynvim`.
 Configurations
 ----------------
 
-```vimscript
+```vim
 if has("nvim") && has("python3")
     packadd! proj.nvim
     call proj#markers#set({
@@ -29,7 +29,7 @@ returns the found root directory of the current active file.
 
 You can do some interesting things with it like:
 
-```vimscript
+```vim
 nnoremap <silent> <Leader>df :call execute("Denite file/rec:" . proj#root())<CR>
 nnoremap <silent> <Leader>F :call execute('Defx -split=floating -resume ' . proj#root())<CR>
 ```
